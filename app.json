@@ -2,9 +2,10 @@
   "expo": {
     "name": "expoAplicationPlayground",
     "slug": "expoAplicationPlayground",
+    "scheme": "expoaplicationplayground",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -31,6 +32,21 @@
       "eas": {
         "projectId": "acfca4b7-c325-425d-8028-448f9a1abef9"
       }
-    }
+    },
+    "plugins": [
+      [
+        "./plugins/withAndroidMainActivityAttributes",
+        {
+          "attributes": [
+            {
+              "android:name": "android.intent.category.HOME"
+            },
+            {
+              "android:name": "android.intent.category.DEFAULT"
+            }
+          ]
+        }
+      ]
+    ]
   }
 }
